@@ -32,9 +32,6 @@ namespace DataTest
             button2.Enabled = false;
             button2.Hide();
 
-
-
-
             if (File.Exists("AppData Dont Delete.xml"))
             {
                 
@@ -98,28 +95,19 @@ namespace DataTest
                         b = b + 4;
                         c = c + 4;
                         d = d + 4;
-
                     }
 
                         // Gridview.Rows.Add(i,info.NewList[i]);
-
-
                 }
                 catch { }
                 read.Close();
-
-           
-                
-
                 //  Gridview.Rows.Add(false, "34324");
             }
         }
 
         private void Gridview_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-         
-
-        }
+                 }
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -136,11 +124,7 @@ namespace DataTest
 
                 //MessageBox.Show(a);
                 //MessageBox.Show(s);
-
-
-            
-
-            }
+                }
         }
        
         private void button2_Click(object sender, EventArgs e)
@@ -154,20 +138,15 @@ namespace DataTest
                 DataGridViewRow selectedRow = Gridview.Rows[i];
                 // selectedRow.Cells["WorkNumber"].Value = "";
 
-
-               
-                info.NewList.Add(Convert.ToString(selectedRow.Cells["WorkState"].Value));
+        info.NewList.Add(Convert.ToString(selectedRow.Cells["WorkState"].Value));
         info.NewList.Add(Convert.ToString(selectedRow.Cells["WorkNumber"].Value));
         info.NewList.Add (Convert.ToString(selectedRow.Cells["WorkName"].Value));
           info.NewList.Add( Convert.ToString(selectedRow.Cells["StartDate"].Value));
             info.NewList.Add( Convert.ToString(selectedRow.Cells["EndDate"].Value));
                 
-
             }
            // File.WriteAllText("data.xml", "");
             SaveXML.SaveData(info, "AppData Dont Delete.xml");
-            
-        
         }
 
         private void saveToolStripMenuItem_Click(object sender, EventArgs e)
@@ -182,20 +161,14 @@ namespace DataTest
                 DataGridViewRow selectedRow = Gridview.Rows[i];
                 // selectedRow.Cells["WorkNumber"].Value = "";
 
-
-
                 info.NewList.Add(Convert.ToString(selectedRow.Cells["WorkState"].Value));
                 info.NewList.Add(Convert.ToString(selectedRow.Cells["WorkNumber"].Value));
                 info.NewList.Add(Convert.ToString(selectedRow.Cells["WorkName"].Value));
                 info.NewList.Add(Convert.ToString(selectedRow.Cells["StartDate"].Value));
                 info.NewList.Add(Convert.ToString(selectedRow.Cells["EndDate"].Value));
-
-
             }
             // File.WriteAllText("data.xml", "");
             SaveXML.SaveData(info, "AppData Dont Delete.xml");
-
-
             for (int i = 0; i < dataGridView1.Rows.Count; i++)
             {
 
@@ -204,27 +177,16 @@ namespace DataTest
                 DataGridViewRow selectedRow = dataGridView1.Rows[i];
                 // selectedRow.Cells["WorkNumber"].Value = "";
 
-
-
                 info.NewList2.Add(Convert.ToString(selectedRow.Cells["Number"].Value));
                // info.NewList2.Add(Convert.ToString(selectedRow.Cells["WorkNumber"].Value));
                 info.NewList2.Add(Convert.ToString(selectedRow.Cells["Name"].Value));
                 info.NewList2.Add(Convert.ToString(selectedRow.Cells["Start"].Value));
                 info.NewList2.Add(Convert.ToString(selectedRow.Cells["End"].Value));
-
-
             }
             // File.WriteAllText("data.xml", "");
             SaveXML.SaveData(info, "AppData Dont Delete.xml");
 
-
-
-
-
             MessageBox.Show("Saved Successfully", "Saved", MessageBoxButtons.OK,MessageBoxIcon.Asterisk);
-
-
-
         }
         private void ExitButton()
         {
@@ -232,26 +194,18 @@ namespace DataTest
             Information info = new Information();
             for (int i = 0; i < Gridview.Rows.Count; i++)
             {
-
                 int selectedrowindex = Gridview.SelectedCells[0].RowIndex;
                 // Gridview.Rows.RemoveAt(selectedrowindex);
                 DataGridViewRow selectedRow = Gridview.Rows[i];
                 // selectedRow.Cells["WorkNumber"].Value = "";
-
-
-
                 info.NewList.Add(Convert.ToString(selectedRow.Cells["WorkState"].Value));
                 info.NewList.Add(Convert.ToString(selectedRow.Cells["WorkNumber"].Value));
                 info.NewList.Add(Convert.ToString(selectedRow.Cells["WorkName"].Value));
                 info.NewList.Add(Convert.ToString(selectedRow.Cells["StartDate"].Value));
                 info.NewList.Add(Convert.ToString(selectedRow.Cells["EndDate"].Value));
-
-
             }
             // File.WriteAllText("data.xml", "");
             SaveXML.SaveData(info, "AppData Dont Delete.xml");
-
-
             for (int i = 0; i < dataGridView1.Rows.Count; i++)
             {
 
@@ -259,29 +213,15 @@ namespace DataTest
                 // Gridview.Rows.RemoveAt(selectedrowindex);
                 DataGridViewRow selectedRow = dataGridView1.Rows[i];
                 // selectedRow.Cells["WorkNumber"].Value = "";
-
-
-
                 info.NewList2.Add(Convert.ToString(selectedRow.Cells["Number"].Value));
                 // info.NewList2.Add(Convert.ToString(selectedRow.Cells["WorkNumber"].Value));
                 info.NewList2.Add(Convert.ToString(selectedRow.Cells["Name"].Value));
                 info.NewList2.Add(Convert.ToString(selectedRow.Cells["Start"].Value));
                 info.NewList2.Add(Convert.ToString(selectedRow.Cells["End"].Value));
-
-
             }
             // File.WriteAllText("data.xml", "");
             SaveXML.SaveData(info, "AppData Dont Delete.xml");
-
-
-
-
-
            // MessageBox.Show("OK");
-
-
-
-
         }
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
@@ -291,16 +231,14 @@ namespace DataTest
             ExitButton();
                 //saveToolStripMenuItem.PerformClick();
             
-             
-            Application.Exit();
+              Application.Exit();
         }
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
-       
-                saveToolStripMenuItem.PerformClick();
-            
-        }
+                       saveToolStripMenuItem.PerformClick();
+           
+       }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         { 
@@ -332,7 +270,7 @@ namespace DataTest
             //}
 
 
-            //DataGridViewRow selectedRow1 = dataGridView1.Rows[q];
+          //DataGridViewRow selectedRow1 = dataGridView1.Rows[q];
             ////selectedRow1.Cells["WorkState"].Value = h;
             //selectedRow1.Cells["Number"].Value = a;
             //selectedRow1.Cells["Name"].Value = s;
@@ -392,10 +330,7 @@ namespace DataTest
 
             }
             
-
-
-
-        }
+            }
 
         private void button5_Click(object sender, EventArgs e)
         {
